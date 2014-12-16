@@ -1250,6 +1250,7 @@ containing a value of this type.
         public static final int hello_world=0x7f0a000e;
         public static final int start_text=0x7f0a0011;
         public static final int title=0x7f0a0010;
+        public static final int title_activity_gestures_screen=0x7f0a0013;
     }
     public static final class style {
         /** 

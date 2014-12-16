@@ -19,6 +19,7 @@ public class GesturesIndexActivity extends Activity {
         setContentView(R.layout.activity_gestures_index);
         
         getInit();
+        addClickListener();
     }
     
     public void getInit () {
@@ -29,7 +30,7 @@ public class GesturesIndexActivity extends Activity {
     	mStartButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	i = new Intent(GesturesIndexActivity.this, GesturesActivity.class);
-            	startActivityForResult(i, 0);
+            	startActivity(i);
             }
         });
     }
