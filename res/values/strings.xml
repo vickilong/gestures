@@ -8,6 +8,9 @@
     <string name="title">Gestures</string>
     <string name="start_text">Start</string>
     <string name="exit_text">Exit</string>
+    <string name="results_text">Results</string>
+    <string name="restart_text">Restart</string>
+    
     <string name="title_activity_gestures_screen">GesturesScreenActivity</string>
     
 </resources>
