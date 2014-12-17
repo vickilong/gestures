@@ -14,4 +14,12 @@
         android:layout_alignParentTop="true"
         tools:layout="@layout/button_fragment" />
     
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_fragment"
+        android:layout_marginTop="15dp"
+        android:text="@string/timer_text" />
+    
 </RelativeLayout>
