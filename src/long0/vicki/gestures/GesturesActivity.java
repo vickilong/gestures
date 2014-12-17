@@ -16,7 +16,7 @@ public class GesturesActivity extends FragmentActivity implements ButtonFragment
     	
     }
     
-    public void onButtonClick(boolean close) {
+    public void onButtonClick() {
     	finish();
     }
 	

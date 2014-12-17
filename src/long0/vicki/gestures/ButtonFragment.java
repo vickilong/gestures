@@ -1,5 +1,6 @@
 package long0.vicki.gestures;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,8 +15,13 @@ public class ButtonFragment extends Fragment {
 	ButtonListener activityCallback;
 	
 	public interface ButtonListener {
-		public void onButtonClick(boolean close);
+		public void onButtonClick();
 	}
+	
+   public void onAttach(Activity activity) {
+     super.onAttach(activity);
+     activityCallback = (ButtonListener) activity;
+   }
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater,
@@ -33,7 +39,7 @@ public class ButtonFragment extends Fragment {
 	}
 	
 	public void buttonClicked (View view) {
-		activityCallback.onButtonClick(true);
+		activityCallback.onButtonClick();
 	}
 	
 }
