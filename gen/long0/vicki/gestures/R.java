@@ -1258,6 +1258,7 @@ containing a value of this type.
         public static final int timer_text=0x7f0a0013;
         public static final int title=0x7f0a0010;
         public static final int title_activity_gestures_screen=0x7f0a0016;
+        public static final int title_activity_results_screen=0x7f0a0017;
     }
     public static final class style {
         /** 

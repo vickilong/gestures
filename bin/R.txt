@@ -356,6 +356,7 @@ int string start_text 0x7f0a0011
 int string timer_text 0x7f0a0013
 int string title 0x7f0a0010
 int string title_activity_gestures_screen 0x7f0a0016
+int string title_activity_results_screen 0x7f0a0017
 int style AppBaseTheme 0x7f0b008b
 int style AppTheme 0x7f0b008c
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063
