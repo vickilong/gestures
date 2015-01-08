@@ -31,5 +31,19 @@ public class SwipeImage {
 				return -1;
 		}
 	}
+
+	/**
+	 * @return the imageIds
+	 */
+	public ArrayList<Integer> getImageIds() {
+		return imageIds;
+	}
+
+	/**
+	 * @param imageIds the imageIds to set
+	 */
+	public void setImageIds(ArrayList<Integer> imageIds) {
+		this.imageIds = imageIds;
+	}
 	
 }
