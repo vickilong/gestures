@@ -12,9 +12,15 @@
     <string name="timer_text"></string>
     
     <string name="results_text">Results</string>
+    <string name="final_score_text"></string>
     <string name="restart_text">Restart</string>
     
     <string name="title_activity_gestures_screen">GesturesScreenActivity</string>
-    <string name="title_activity_results_screen">GesturesScreenActivity</string>
+    <string name="title_activity_results_screen">ResultsActivity</string>
+    
+    <string name="drawableName">drawable</string>
+    <string name="packageName">long0.vicki.gestures</string>
+    
+    <string name="upImageName">up</string>
     
 </resources>

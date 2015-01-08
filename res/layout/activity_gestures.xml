@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GesturesIndexActivity" >
+    tools:context=".GesturesIndexActivity"
+    android:id="@+id/gesturesBackground" >
     
     <fragment
         android:id="@+id/button_fragment"

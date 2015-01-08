@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    tools:context=".GesturesIndexActivity" >
     
     <TextView
         android:id="@+id/results"
@@ -10,12 +12,20 @@
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:text="@string/results_text" />
+    
+    <TextView
+        android:id="@+id/final_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/results"
+        android:layout_centerHorizontal="true"
+        android:text="@string/final_score_text" />
 
     <Button
         android:id="@+id/restart_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/results"
+        android:layout_below="@id/final_score"
         android:layout_centerHorizontal="true"
         android:text="@string/restart_text" />
 
