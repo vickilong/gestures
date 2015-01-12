@@ -42,9 +42,9 @@ public class OnSwipeTouchListener implements OnTouchListener {
                 } else {
                     if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
                         if (diffY > 0) {
-                            result = onSwipeBottom();
+                            result = onSwipeDown();
                         } else {
-                            result = onSwipeTop();
+                            result = onSwipeUp();
                         }
                     }
                 }
@@ -63,11 +63,11 @@ public class OnSwipeTouchListener implements OnTouchListener {
         return false;
     }
 
-    public boolean onSwipeTop() {
+    public boolean onSwipeUp() {
         return false;
     }
 
-    public boolean onSwipeBottom() {
+    public boolean onSwipeDown() {
         return false;
     }
 }

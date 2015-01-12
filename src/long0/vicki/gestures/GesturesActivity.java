@@ -14,7 +14,7 @@ public class GesturesActivity extends FragmentActivity implements ButtonFragment
 	private TextView mTimer;
 	private View mRootView;
 	private SwipeImage mBackgroundImage;
-	private int mScore;
+	private int mScore, mGesture;
 	
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,36 +27,46 @@ public class GesturesActivity extends FragmentActivity implements ButtonFragment
         mBackgroundImage = new SwipeImage();
         
         mScore = 0;
+        mGesture = 0;
         
         startTimer();
         changeBackground();
         
         mRootView.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View arg0) {
             	Toast.makeText(GesturesActivity.this, "tap", Toast.LENGTH_SHORT).show();
+            	mGesture = 0;
+            	modifyScore();
             	changeBackground();
             }
         });
         
         mRootView.setOnTouchListener(new OnSwipeTouchListener(GesturesActivity.this) {
-            public boolean onSwipeTop() {
-                Toast.makeText(GesturesActivity.this, "top", Toast.LENGTH_SHORT).show();
+            public boolean onSwipeUp() {
+                Toast.makeText(GesturesActivity.this, "up", Toast.LENGTH_SHORT).show();
+                mGesture = 1;
+                modifyScore();
                 changeBackground();
                 return true;
             }
             public boolean onSwipeRight() {
                 Toast.makeText(GesturesActivity.this, "right", Toast.LENGTH_SHORT).show();
+                mGesture = 2;
+                modifyScore();
                 changeBackground();
                 return true;
             }
             public boolean onSwipeLeft() {
                 Toast.makeText(GesturesActivity.this, "left", Toast.LENGTH_SHORT).show();
+                mGesture = 3;
+                modifyScore();
                 changeBackground();
                 return true;
             }
-            public boolean onSwipeBottom() {
-                Toast.makeText(GesturesActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+            public boolean onSwipeDown() {
+                Toast.makeText(GesturesActivity.this, "down", Toast.LENGTH_SHORT).show();
+                mGesture = 4;
+                modifyScore();
                 changeBackground();
                 return true;
             }
@@ -77,6 +87,30 @@ public class GesturesActivity extends FragmentActivity implements ButtonFragment
     	         finish();
     	     }
     	}.start();
+    }
+    
+    public boolean gestureIsCorrect() {
+    	if (mBackgroundImage.getCurrentImageId() == mGesture) {
+    		return true;
+    	}
+    	return false;    			
+    }
+    
+    public void increaseScore () {
+    	mScore++;
+    }
+    
+    public void decreaseScore () {
+    	mScore--;
+    }
+    
+    public void modifyScore () {
+    	if (gestureIsCorrect()) {
+        	increaseScore();
+        }
+        else {
+        	decreaseScore();
+        }
     }
     
     public void changeBackground () {
