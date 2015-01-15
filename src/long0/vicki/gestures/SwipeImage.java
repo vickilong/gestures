@@ -1,3 +1,10 @@
+//***************************************************************
+//  SwipeImage.java     Author: Vicki Long
+//
+//  A class that returns a reference to a random image from a
+//  set of four arrows and a circle.
+//***************************************************************
+
 package long0.vicki.gestures;
 
 import java.util.ArrayList;
@@ -7,6 +14,9 @@ public class SwipeImage {
 	private ArrayList<Integer> imageIds;
 	private int currentImageId;
 	
+	//public SwipeImage ()
+	//Constructor for SwipeImage
+	//Initializes the ArrayList and adds all the references to the images
 	public SwipeImage () {
 		imageIds = new ArrayList<Integer>(5);
 		currentImageId = -1;
@@ -17,6 +27,9 @@ public class SwipeImage {
 		imageIds.add(R.drawable.down);
 	}
 	
+	//public int getRandomImage ()
+	//Chooses a random image out of the 5 images
+	//Returns the reference to the image
 	public int getRandomImage () {
 		switch ((int) (Math.random() * 5)) {
 			case 0:

@@ -10,6 +10,7 @@
     
     <string name="exit_text">Exit</string>
     <string name="timer_text"></string>
+    <string name="score">score</string>
     
     <string name="results_text">Results</string>
     <string name="final_score_text"></string>

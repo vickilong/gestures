@@ -1,3 +1,10 @@
+//***************************************************************
+//  ButtonFragment.java     Author: Vicki Long
+//
+//  A button fragment that allows the user to exit the game
+//  before the timer reaches 0.
+//***************************************************************
+
 package long0.vicki.gestures;
 
 import android.app.Activity;
@@ -29,6 +36,7 @@ public class ButtonFragment extends Fragment {
 		View view = inflater.inflate(R.layout.button_fragment, container, false);
 		sExitButton = (Button) view.findViewById(R.id.exit_gestures_button);
 		
+		//When the Exit button is clicked, closes the activity
 		sExitButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				buttonClicked(v);
